@@ -1,0 +1,24 @@
+<p *ngIf="isLoading">Loading...</p>
+
+<button class="btn-primary" style="margin: 20px" (click)="getFirstTenUsers()">
+    GET FIRST 10 USERS
+</button>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Title</th>
+            <th scope="col">Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users;">
+            <th scope="row">{{ user.id }}</th>
+            <td>
+                {{ user.title }}
+            </td>
+            <td>{{ user.body }}</td>
+        </tr>
+    </tbody>
+</table>

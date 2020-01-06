@@ -1,0 +1,20 @@
+<p *ngIf="isLoading">Loading...</p>
+
+<div class="m-20">
+    <form [formGroup]="FG">
+
+        <label>ID</label>
+        <input type="text" formControlName="id">
+
+        <label>Title</label>
+        <input type="text" formControlName="title">
+
+        <label>Body</label>
+        <input type="text" formControlName="body">
+
+        <label>User id</label>
+        <input type="text" formControlName="userId">
+    </form>
+
+    <button (click)="onSubmit()">Submit</button>
+</div>
